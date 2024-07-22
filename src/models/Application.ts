@@ -17,6 +17,11 @@ const applicationSchema = new Schema({
     },
     applicantEmail: {
         type: String,
-        require: true
-    }
+        required: true
+    },
+    jobId: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
+    },
+    
 })
