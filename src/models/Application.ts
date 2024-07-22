@@ -23,5 +23,20 @@ const applicationSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true
     },
-    
+    status: {
+        type: String,
+        required: true
+    },
+    createdAt: {
+        type: String,
+        required: true
+    },
+    updatedAt: {
+        type: String,
+        required: true
+    }
+
 })
+
+const Application = mongoose.model<IApplication>('Application', applicationSchema);
+export default Application;
