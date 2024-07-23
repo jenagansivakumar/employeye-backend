@@ -1,6 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
-// Step 1: Define the Interface
 interface IJobPosting extends Document {
   jobTitle: string;
   companyName: string;
@@ -13,7 +12,6 @@ interface IJobPosting extends Document {
   updatedAt: Date;
 }
 
-// Step 2: Create the Schema
 const JobPostingSchema: Schema = new Schema({
   jobTitle: { type: String, required: true },
   companyName: { type: String, required: true },
@@ -26,7 +24,6 @@ const JobPostingSchema: Schema = new Schema({
   updatedAt: { type: Date, default: Date.now },
 });
 
-// Step 3: Export the Model
 const JobPosting = mongoose.model<IJobPosting>('JobPosting', JobPostingSchema);
 
 export default JobPosting;
